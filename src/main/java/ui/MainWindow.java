@@ -14,9 +14,11 @@ public class MainWindow extends JFrame {
         setDefaultLookAndFeelDecorated(true);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(100, 100, 500, 500);
+        setBounds(100, 100, 900, 650);
 
-        setContentPane(new Map());
+        // setContentPane(new Map());
+        add(new Map());
+        
         setVisible(true);
     }
 
@@ -25,7 +27,7 @@ public class MainWindow extends JFrame {
      */
     class Map extends JTable {
 
-        private int mapSz = 400;
+        private int mapSz = 30;
         private int cellSz = 15;
 
         public Map() {
