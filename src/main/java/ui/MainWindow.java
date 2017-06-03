@@ -26,13 +26,17 @@ public class MainWindow extends JFrame {
     class Map extends JTable {
 
         private int mapSz = 400;
-        private int cellSz = 5;
+        private int cellSz = 15;
 
         public Map() {
 
+            // Ширина и высота таблицы.
             setModel(new DefaultTableModel(mapSz, mapSz));
+
+            // Высота ячейки
             setRowHeight(cellSz);
 
+            // Перебор ячеек для задания ширины.
             for(int i = 0; i < mapSz; i++) {
                 // getColumnModel().getColumn(i).setWidth(cellSz);
                 getColumnModel().getColumn(i).setMinWidth(cellSz);
